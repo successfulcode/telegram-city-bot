@@ -21,7 +21,7 @@ bot.on('message', (msg) => {
         chatId,
         `${msg.from.first_name} tu žinai geriau...`
       );
-    case 'Kiek tau metu?':
+    case 'Kiek tau metų?':
       return bot.sendMessage(chatId, `Tiek pat kiek ir mano miestui...`);
     case 'Papasakok apie Visaginą':
       return bot.sendMessage(
