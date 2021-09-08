@@ -8,9 +8,13 @@ const bot = new TelegramApi(TOKEN, { polling: true });
 bot.on('message', (msg) => {
   const text = msg.text;
   const chatId = msg.chat.id;
+  console.log(msg);
   switch (text) {
     case '/start':
-      return `${msg.from.first_name} sveiki atvykę į svečius pas Visagino gidą-botą!`;
+      return bot.sendMessage(
+        chatId,
+        `${msg.from.first_name} sveiki atvykę į svečius pas Visagino gidą-botą!`
+      );
     case 'Kas tu?':
       return bot.sendMessage(
         chatId,
